@@ -12,6 +12,49 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">    
 </head>
 <body>
-    
+    <div class="wrapper">
+        <div class="container pt-3">
+            <div class="card">
+                <div class="card-header">
+                    Basic Form
+                </div>
+                <div class="card-body">
+                    <!-- creating form -->
+                    <form action="" class="check-form">
+                        <div class="row pb-2">
+                            <div class="col">
+                                <label for="">First Name</label>
+                                <input type="text" class="form-control" name="first_name" required="required">
+                            </div>
+                            <div class="col">
+                                <label for="">Last Name</label>
+                                <input type="text" class="form-control" name="last_name"  required="required">
+                            </div>
+                        </div>
+                        <div class="row pb-2">
+                            <div class="col">
+                                <label for="">Mobile</label>
+                                <input type="text" class="form-control" name="mobile"  required="required">
+                            </div>
+                            <div class="col">
+                                <label for="">Email</label>
+                                <input type="text" class="form-control" name="email"  required="required" data-validate="email">
+                            </div>
+                        </div>
+                        <div class="row pb-2">
+                            <div class="col">
+                                <button type="submit" class="btn btn-primary">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 </html>
