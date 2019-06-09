@@ -32,8 +32,6 @@ $(window).on('load',function(){
                     return `${input.name} is required`
                 }
             }
-        })
+        }
     })
-
-
 })
