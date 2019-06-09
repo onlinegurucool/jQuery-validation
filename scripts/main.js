@@ -1,6 +1,15 @@
 $(window).on('load',function(){
     $('.check-form').validate({
-        errorElement: `span`
+        errorElement: `span`,
+        errorClass: `text-danger`,
+        submitHandler: function(form) {
+            // find button 
+            let button = $(form).find('button');
+            button.prepend(`<i class="fa fa-spin fa-sync-alt"></i>`)
+            setTimeout(() => {
+                form.submit();
+            }, 4000);
+        }
     })
 
     $('[required="required"]').each(function(){
