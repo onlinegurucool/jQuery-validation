@@ -5,7 +5,7 @@ $(window).on('load',function(){
         submitHandler: function(form) {
             // find button 
             let button = $(form).find('button');
-            button.prepend(`<i class="fa fa-spin fa-sync-alt"></i>`)
+            button.prepend(`<i class="fa fa-spin fa-sync-alt"></i>`).attr("disabled","disabled").addClass('btn-secondary')
             setTimeout(() => {
                 form.submit();
             }, 4000);
@@ -32,6 +32,6 @@ $(window).on('load',function(){
                     return `${input.name} is required`
                 }
             }
-        }
+        })
     })
 })
