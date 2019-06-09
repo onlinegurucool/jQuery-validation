@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,30 +10,31 @@
         Using bootstrap for make our form beautiful  
         Note that i am not using bootstrap.js
     -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
 </head>
+
 <body>
     <div class="wrapper">
-        <div class="container pt-3">
+        <div class="container pt-4">
             <div class="card">
                 <div class="card-header">
                     Basic Form
                 </div>
                 <div class="card-body">
                     <!-- creating form -->
-                    <form action="" class="check-form" autocomplete="off">
-                        <div class="row pb-2">
+                    <form action="" class="check-form">
+                        <div class="row pb-3">
                             <div class="col">
                                 <label for="">First Name</label>
-                                <input type="text" class="form-control" name="first_name" required="required">
+                                <input type="text" class="form-control" name="first_name" autocomplete="off" required="required">
                             </div>
                             <div class="col">
                                 <label for="">Last Name</label>
-                                <input type="text" class="form-control" name="last_name"  required="required">
+                                <input type="text" class="form-control" name="last_name" autocomplete="off" required="required">
                             </div>
                         </div>
-                        <div class="row pb-2">
+                        <div class="row pb-3">
                             <div class="col">
                                 <label for="">Address Type</label>
                                 <select name="address_type" id="" class="form-control">
@@ -52,7 +54,7 @@
                                 <input type="text" class="form-control" name="email"  required="required" data-validate="email"  autocomplete="off">
                             </div>
                         </div>
-                        <div class="row pb-2">
+                        <div class="row pb-3">
                             <div class="col">
                                 <button type="submit" class="btn btn-primary">
                                     <span>Submit</span>
@@ -68,4 +70,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
     <script src="scripts/main.js"></script>
 </body>
+
 </html>
