@@ -28,6 +28,12 @@ $(window).on("load", function() {
     $('[data-validate="email"]').each(function() {
         $(this).rules("add", {
             email: true,
+            remote: function(){
+                return {
+                    url: `http://localhost:8080/validate-email`,
+                    type: 'GET'
+                }
+            },
             messages: {
                 email: function(param, input) {
                     console.log(input);
