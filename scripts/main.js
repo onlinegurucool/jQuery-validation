@@ -25,7 +25,7 @@ $(window).on("load", function() {
         });
     });
 
-    $('[data-validate="email"]').each(function() {
+    $('[data-validate^="email"]').each(function() {
         $(this).rules("add", {
             email: true,
             messages: {
@@ -44,7 +44,8 @@ $(window).on("load", function() {
             value,
             element
         ) {
-            let length = value.length;
+            let filterNumber = Number(value)
+            let length = (filterNumber.toString()).length;
             if (!value) {
                 return true;
             } else {
@@ -83,11 +84,13 @@ $(window).on("load", function() {
 
         $(this).rules("add", {
             addressType: true,
+            number: true,
             mobileLengthValidation: true,
             messages: {
                 mobileLengthValidation: function(param, element) {
                     var value = $(element).val();
-                    var length = value.length;
+                    var filterValue = Number(value)
+                    var length = (filterValue.toString()).length;
                     if (length < 10) {
                         return `Mobile number should be min 10 numbers`;
                     } else if (length == 11 && value[0] != 0) {
