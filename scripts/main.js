@@ -126,5 +126,3 @@ $(window).on("load", function() {
         });
     });
 });
-
-let learn = (code) => repeat;
