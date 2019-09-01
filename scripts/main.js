@@ -28,9 +28,19 @@ $(window).on("load", function() {
     $('[data-validate^="email"]').each(function() {
         $(this).rules("add", {
             email: true,
+            remote: function (elem) {
+                return {
+                    url: "http://localhost:8080/validate-email",
+                    beforeSend: function() {
+                        $(elem).parents('.col').append('<i class="spinner-border spinner-border-sm"></i>')
+                    },
+                    complete: function() {
+                        $(elem).parents('.col').find('.spinner-border').remove();
+                    }
+                }
+            },
             messages: {
                 email: function(param, input) {
-                    console.log(input);
                     return `${input.name} is required`;
                 }
             }
